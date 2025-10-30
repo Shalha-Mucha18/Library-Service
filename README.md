@@ -71,7 +71,7 @@ A production-ready FastAPI application that powers an online library system. It 
 Celery beat schedules `app.tasks.archive_outdated_books` every 30 minutes. The task marks books older than 10 years as archived. You can call it manually:
 
 ```bash
-celery -A app.core.celery_app.celery_app call app.tasks.archive_outdated_books --args='[10]'
+celery -A app.core.celery_app.celery_app call app. tasks.archive_outdated_books --args='[10]'
 ```
 
 ## Testing the API
@@ -96,8 +96,3 @@ app/
 main.py           # ASGI entrypoint (imports app factory)
 ```
 
-## Next Steps
-
-- Add Alembic migrations if schema evolution is expected.
-- Extend CRUD to include update/delete operations.
-- Add authentication/authorization if needed.
